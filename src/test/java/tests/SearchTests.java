@@ -17,7 +17,6 @@ public class SearchTests {
 
     @Test
     void successfulSearchTest() throws MalformedURLException, InterruptedException {
-
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
