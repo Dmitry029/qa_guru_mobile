@@ -21,15 +21,16 @@ public class SearchTests {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "dmitrykostjuchen_YTJDg2");
-        caps.setCapability("browserstack.key", "PfJ2iaVLSE1kjU9pTW2y");
+        caps.setCapability("browserstack.user", "dmitry_8rmWIH");
+        caps.setCapability("browserstack.key", "zW2u3gAFLNoZwF4qi874");
 
         // Set URL of the application under test
-        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        //caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        caps.setCapability("appium:app", "bs://sample.app");
 
         // Specify device and os_version for testing
-        caps.setCapability("device", "Google Pixel 3");
-        caps.setCapability("os_version", "9.0");
+        caps.setCapability("device", "Samsung Galaxy S22 Ultra");
+        caps.setCapability("os_version", "12.0");
 
         // Set other BrowserStack capabilities
         caps.setCapability("project", "First Java Project");
@@ -50,7 +51,7 @@ public class SearchTests {
         searchElement.click();
         WebElement insertTextElement = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
             ExpectedConditions.elementToBeClickable(
-                AppiumBy.id("org.wikipedia.alpha:id/search_src_text")));
+                AppiumBy.id("org.wikipedia.alpha:id/addLangContainer")));
         insertTextElement.sendKeys("Appium");
         Thread.sleep(5000);
         List<WebElement> allProductsName = driver.findElements(AppiumBy.className(
