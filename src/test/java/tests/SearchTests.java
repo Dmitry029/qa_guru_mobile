@@ -57,7 +57,6 @@ public class SearchTests {
             "android.widget.TextView"));
         assert (!allProductsName.isEmpty());
 
-
         // Invoke driver.quit() after the test is done to indicate that the test is completed.
         driver.quit();
     }
